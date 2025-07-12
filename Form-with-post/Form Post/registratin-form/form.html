@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <form action="/submit" method="POST">
+      <label>First Name:</label>
+      <input type="text" name="firstName" required /><br /><br />
+
+      <label>Last Name:</label>
+      <input type="text" name="lastName" required /><br /><br />
+
+      <label>Email:</label>
+      <input type="email" name="email" required /><br /><br />
+
+      <label>Password:</label>
+      <input type="password" name="password" required /><br /><br />
+
+      <label>Age:</label>
+      <input type="number" name="age" required /><br /><br />
+
+      <div class="radio-group">
+        <label>Sex:</label>
+        <div class="radio-option">
+          <input type="radio" id="male" name="sex" value="Male" required />
+          <label for="male">Male</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="female" name="sex" value="Female" required />
+          <label for="female">Female</label>
+        </div>
+      </div>
+      <br />
+
+      <label>Location:</label>
+      <select name="location" required>
+        <option value="">-- Select your location --</option>
+        <option value="Addis Ababa">Addis Ababa</option>
+        <option value="Bahir Dar">Bahir Dar</option></select
+      ><br /><br />
+
+      <button type="submit">Submit</button>
+      <button type="button" onclick="window.location.href='/login'">
+        Login
+      </button>
+    </form>
+  </body>
+</html>
