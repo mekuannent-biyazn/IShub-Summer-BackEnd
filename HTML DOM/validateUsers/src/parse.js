@@ -14,9 +14,9 @@ async function main() {
     lines.forEach((line, index) => {
       const [fullname, email, phone] = line.trim().split(/\s+/);
 
-      const isFullnameValid = fullname;
-      const isEmailValid = email;
-      const isPhoneValid = phone;
+      // const isFullnameValid = fullname;
+      // const isEmailValid = email;
+      // const isPhoneValid = phone;
 
       const user = {
         fullname,
@@ -25,9 +25,9 @@ async function main() {
         lineNumber: index + 1,
       };
 
-      if (isFullnameValid && isEmailValid && isPhoneValid) {
-        allUsers.push(user);
-      }
+      // if (isFullnameValid && isEmailValid && isPhoneValid) {
+      allUsers.push(user);
+      // }
     });
 
     const jsFileContent = `
