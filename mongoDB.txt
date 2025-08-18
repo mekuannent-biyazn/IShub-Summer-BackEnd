@@ -11,5 +11,3 @@ userDB> db.tasks.updateMany({status:"pending"},{$set:{status:"inprogres"}})
 userDB> db.tasks.updateOne({title:"fullstack"},{$push:{tags:"javascript"}})
 userDB> db.users.deleteOne({name:"mengstu"})
 userDB> db.users.deleteOne({name:"mengstu"})
-
-ff
