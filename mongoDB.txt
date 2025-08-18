@@ -1,0 +1,15 @@
+mongosh
+use userDB
+db.users.insertMany([{name:"mekuannent",email:"mekuannent@gmail.com",_id:1234},{name:"mengstu",email:"mengstu@gmail.com",_id:2341},{name:"alemu",email:"alemu@gmail.com",_id:3412}])
+db.tasks.insertMany([{title:"backend",assignedto:1234,status:"pending",tags:["express","nodejs","mongodb"]},{title:"frontend",assignedto:2341,status:"done",tags:["JS","react"]},{title:"fullstack",assignedto:1234,status:"pending",tags:["MERN","reactjs","tailwindcss"]}])
+userDB> db.users.find()
+db.tasks.find({assignedto:1234})
+userDB> db.tasks.find({status:"done"})
+userDB> db.tasks.find({},{title:1,_id:0})
+userDB> db.users.updateOne({_id:1234},{$set:{email:"makiba@gmail.com"}})
+userDB> db.tasks.updateMany({status:"pending"},{$set:{status:"inprogres"}})
+userDB> db.tasks.updateOne({title:"fullstack"},{$push:{tags:"javascript"}})
+userDB> db.users.deleteOne({name:"mengstu"})
+userDB> db.users.deleteOne({name:"mengstu"})
+
+ff
