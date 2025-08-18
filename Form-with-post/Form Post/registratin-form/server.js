@@ -34,7 +34,6 @@ app.post("/login", (req, res) => {
   if (user) {
     console.log(`Well come back: ${user.firstName}`);
     res.send(`Welcome back: ${user.firstName}`);
-    // res.send("user").json(user);
   } else {
     res.send(
       `please try again you have password or email is incorect <a href="http://127.0.0.1:5500/login.html">try again</a>`
