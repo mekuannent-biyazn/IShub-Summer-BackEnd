@@ -5,7 +5,6 @@ import {
   createTask as createTaskService,
   deleteTaskById as deleteTaskByIdService,
 } from "../data/taskService.js";
-// const tasks = [];
 
 export const getAllTasks = (req, res) => {
   try {
@@ -13,10 +12,11 @@ export const getAllTasks = (req, res) => {
     res.status(200).json(tasks);
   } catch (err) {
     console.error(`Errot occured! `, err);
+    res.status(500).json({ error: "internal server error" });
   }
 };
 
-// get tast by id
+// get tast by id controler
 export const getTaskById = (req, res) => {
   try {
     const { id } = req.params;
@@ -33,7 +33,7 @@ export const getTaskById = (req, res) => {
   }
 };
 
-// create new task
+// create new task controller
 export const createTask = (req, res) => {
   try {
     const { title, description, dueDate, status } = req.body;
@@ -55,15 +55,12 @@ export const createTask = (req, res) => {
     }
 
     const newTask = createTaskService({
-      // id:uuidv4(),
       title,
       description,
       createdAt: new Date(),
       dueDate: presentDate,
       status: status || "pending",
     });
-
-    // tasks.push(newTask);
 
     res
       .status(201)

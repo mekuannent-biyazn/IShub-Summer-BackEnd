@@ -9,18 +9,18 @@ import {
 
 const router = Router();
 
-//  get all tasks
+//  get all tasks route
 router.get("/tasks", getAllTasks);
 
-// get spesfic task by id
+// get spesfic task by id route
 router.get("/tasks/:id", getTaskById);
 
-// update task
+// update task by id route
 router.put("/tasks/:id", updateTaskById);
 
-// delete task by id
+// delete task by id route
 router.delete("/tasks/:id", deleteTaskById);
 
-//  create new task
+//  create new task route
 router.post("/tasks", createTask);
 export default router;
